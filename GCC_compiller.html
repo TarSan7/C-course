@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>GCC compiller</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Get_started_c.html">
+			<a class="a1" href="Get_started_c.html">Get started c</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1 class="text_h1">GCC compiller</h1>
+		<br>
+		<p class="text">To create C programs, you need a text editor with which you can type the source code.
+						And you also need a compiler that takes a C source file and compiles it into an executable file.</p>
+		<p class="text">As a compiler, we will use the most popular gcc compiler today, which is available for different
+						platforms. More similar information about GCC can be found on the official website of the 
+						project <a href="https://gcc.gnu.org/">https://gcc.gnu.org/</a>.</p>
+		<p class="text">GCC was started by Richard Stallman in 1985 as a compiler for the GNU Project in order to have
+						a compiler that is free software. Its development was closely overseen by the Free Software 
+						Foundation. The first version was released in the spring of 1987, at the end of 1987, C ++ support
+						appeared. GCC was the first independently created (not based on the Brontian Stroustrup CFront 
+						preprocessor) and the first proper C ++ language compiler (not a C preprocessor).</p>
+		<p class="text">In 1997, a group of developers, dissatisfied with the slow pace and closeness of official GCC
+						development, created the EGCS (Experimental / Enhanced GNU Compiler System) project, which 
+						combined several experimental GCC branches. The development of EGCS has over time proved more 
+						viable than GCC, and in April 1999, EGCS was announced as the official version of GCC.</p>
+						
+		<p class="text">GCC is now being developed by a broad team of developers from around the world. It is ported to
+						more types of processors and operating systems than any other compiler.</p>
+		<h2 class="text_h2">Stages of compiling C to GCC</h2>
+		<p class="text">Compiling a C program using gcc involves the following steps: prepocessing, compilation,
+						assembly, linking. Consider each of these steps in the example of the program 'hello.c'.
+						Note that you do not need to call each of the commands below to compile hello.c. All programs
+						are automatically called by the compiler and their calls can be tracked by adding the '-v' option
+						to the gcc command. Considering each command individually, we will have a better understanding of
+						the compiler. Along with the fact that 'hello' is a fairly simple program, it uses external
+						libraries, so the compilation of this program will go through all the above steps.</p>
+		<h2 class="text_h2">Preprocessor</h2>
+		<p class="text">The first stage of compilation is to call the preprocessor. The preprocessor expands
+						(substitutes y) macros and adds the required header files to 'hello.c'. To do this, gcc invokes 
+						the following command: cpp hello.c> hello.i The result of this command is a 'hello.i' file that 
+						contains source code with expanded macros and pasted header files. Note that the preprocessor
+						output files have '.i' extensions for C programs and '.ii' for C ++ applications. By default 
+						hello.i and other intermediate files will not be saved to disk after compilation, however, it
+						can be changed by specifying the '-save-temps = obj' option when calling gcc, meaning</p>
+		<p class="text">gcc -save-temps=obj -c hello.c</p>
+		<h2 class="text_h2">Compiler</h2>
+		<p class="text">The next step is actually compiling the preprocessor output file (hello.i). The result of
+						this step is the file 'hello.s'. This file contains assembly language code. The file 'hello.s' 
+						is intermediate, so the default compiler deletes it. To save 'hello.s' and view its contents, 
+						you must execute the following command: gcc -S hello.i</p>
+		<h2 class="text_h2">Build the program</h2>
+		<p class="text">The purpose of this step is to convert the assembly language into machine code and to generate
+						an object file. If there are external function calls in the code, the assembler leaves the start 
+						addresses of these external functions undefined. Their values ​​will be populated by the linker at 
+						the next stage of compilation. To call an assembler:</p>
+		<p class="text">as hello.s -o hello.o</p>
+		<p class="text">As we can see the output command file is specified with the -o option. The result of the assembler is a hello.o file
+						containing the 'hello' program in the form of machine instructions, which also has an undefined 
+						reference to the beginning of the printf () function.</p>
+		<h2 class="text_h2">Linking</h2>
+		<p class="text">The last step of the compilation is linking an object file to create an executable file, actually
+						a 'hello' program. In practice, executable files require many external functions and dynamic
+						(run-time) C libraries. Thus, true link commands that automatically execute gcc are quite complex.</p>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

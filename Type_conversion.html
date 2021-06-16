@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Type conversion</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Basic_concepts.html">
+			<a class="a1" href="Basic_concepts.html">Basic concepts</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Type conversion</h1>
+		<br>
+		<p class="text">If values ​​of different types are involved in arithmetic operations, then the compiler
+		implicitly tries to cast them to the same type. In addition, when we assign a value to a variable, this 
+		value is always cast to the type of the variable. For example:</p>
+		<table border="1px" width="400px" class="table">
+			<tr>
+				<td rowspan="2">1<br><br>2</td>
+				<td rowspan="2">char c = 6;<br><br>int d = c;</td>
+			</tr>
+		</table>
+		<p class="text">The variable d, which represents an int type, is assigned a value of type char,
+						so the compiler converts the value from char to int.</p>
+		<p class="text">At the same time, transformations may not always be safe, since different types have different 
+						internal representations. And just so moving from one view to another without losing data
+						accuracy is not always possible.</p>
+		<p class="text">Let's consider what transformations the compiler uses in arithmetic operations:</p>
+		<ol class="text">
+			<li>If one of the operands is of type long double, then the second operand will also be converted to type <b>long double</b></li>
+			<li>If the previous item is not executed and if one of the operands is of type double, then the second operand will also be converted to type <b>double</b></li>
+			<li>If the previous item is not executed and if one of the operands is of type float, then the second operand will also be converted to type <b>float</b></li>
+			<li>If the previous item is not executed and if one of the operands is of type unsigned long int, then the second operand will also be converted to type <b>unsigned long int</b></li>
+			<li>If the previous item is not executed and if one of the operands is of type long, then the second operand will also be converted to type <b>long</b></li>
+			<li>If the previous item is not executed and if one of the operands is of type unsigned, then the second operand will also be converted to type <b>unsigned</b></li>
+			<li>If the previous paragraph is not satisfied, then both operands are converted to <b>int</b> type</li>
+		</ol>
+		<h2 class="text_h2">Conversion operation</h2>
+		<p class="text">Using a special conversion operation, we can explicitly cast the data to the desired type. For example:</p>
+		<table border="1px" width="400px" class="table">
+					<tr >
+						<td rowspan="8">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7<br><br>8</td>
+						<td rowspan="8">int a = 10;<br><br>int b = 4;<br><br>int c = a / b;<br><br>double d = a / b;<br><br>double e = (double)a / (double)b; <br><br>printf("c = %d \n", c);
+						<br><br>printf("d = %f \n", d);<br><br>printf("e = %f \n", e);</td>
+					</tr>
+		</table>
+		<p class="text">In the expression int c = a / b; the result of division will be integer - 2, in which the 
+		fractional part will be discarded, since both operands of the operation represent integers.</p>
+		<p class="text">In the expression double d = a / b; the division result will represent a real number - 2.00000
+		, but since both operands are integers, then again the result of the operation will be an integer 2, and only the 
+		division field will assign the result to the variable d, converting the value 2 from int to double.</p>
+		<p class="text">In the expression double e = (double) a / (double) b, an explicit data conversion is applied to 
+		the double type, therefore, the division result will also represent a real number - 2.50000.</p>
+		<p class="text">To perform the cast operation, the type to which the value must be cast is indicated in parentheses:</p>
+		<table border="1px" width="400px" class="table">
+			<tr >
+				<td rowspan="4">1<br><br>2<br><br>3<br><br>4</td>
+				<td rowspan="4">int number = 70;<br><br>char symbol = (char) number;<br><br>printf("symbol = %c \n", symbol);
+				<br><br>printf("symbol (int code) = %d \n", symbol);</td>
+			</tr>
+		</table>
+		<p class="text">In some cases, the transformation is accompanied by a loss of information. Without loss of information, the following transformation chains go through:</p>
+		<p class="text"><b>char -> short -> int -> long</b></p>
+		<p class="text"><b>unsigned char -> unsigned short -> unsigned int -> unsigned long</b></p>
+		<p class="text"><b>float -> double -> long double</b></p>
+		<p class="text">With all other transformations that are not included in these chains, we may encounter a loss
+					of data accuracy. So, in the example above, the conversion from int to char is not safe, therefore, 
+					such conversions should be treated with caution.</p>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

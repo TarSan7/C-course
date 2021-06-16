@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Time.h</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Standard_libraries.html">
+			<a class="a1" href="Standard_libraries.html">Standard libraries</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Time.h</h1>
+		<br>
+		<p class="text">The time.h header defines four variable types, two macro and various functions for manipulating date and time.</p>
+			<h2 class="text_h2">Library Variables</h2>
+	<p class="text">Following are the variable types defined in the header time.h −</p>
+		<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>size_t</i></b><br>This is the unsigned integral type and is the result of the sizeof keyword.</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>clock_t</i></b><br>This is a type suitable for storing the processor time.</td>
+			</tr>
+			<tr>
+				<td>3</td><td><b><i>time_t is</i></b><br>This is a type suitable for storing the calendar time.</td>
+			</tr>
+			<tr>
+				<td>4</td><td><b><i>struct tm</i></b><br>This is a structure used to hold the time and date.</td>
+			</tr>
+		</table>
+			
+			
+			<h2 class="text_h2">Library Macros</h2>
+	<p class="text">Following are the macros defined in the header time.h −</p>
+	<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>NULL</i></b><br>This macro is the value of a null pointer constant.</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>CLOCKS_PER_SEC</i></b><br>This macro represents the number of processor clocks per second.</td>
+			</tr>
+		</table>
+		
+			<h2 class="text_h2">Library Functions</h2>
+			<p class="text">Following are the functions defined in the header time.h −</p>
+		<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>char *asctime(const struct tm *timeptr)</i></b><br>Returns a pointer to a string which represents the day and time of the structure timeptr.</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>clock_t clock(void)</i></b><br>Returns the processor clock time used since the beginning of an implementation defined era (normally the beginning of the program).</td>
+			</tr>
+			<tr>
+				<td>3</td><td><b><i>char *ctime(const time_t *timer)</i></b><br>Returns a string representing the localtime based on the argument timer.</td>
+			</tr>
+			<tr>
+				<td>4</td><td><b><i>double difftime(time_t time1, time_t time2)</i></b><br>Returns the difference of seconds between time1 and time2 (time1-time2)..</td>
+			</tr>
+			<tr>
+				<td>5</td><td><b><i>struct tm *gmtime(const time_t *timer)</i></b><br>The value of timer is broken up into the structure tm and expressed in Coordinated Universal Time (UTC) also known as Greenwich Mean Time (GMT).</td>
+			</tr>
+			<tr>
+				<td>6</td><td><b><i>struct tm *localtime(const time_t *timer)</i></b><br>The value of timer is broken up into the structure tm and expressed in the local time zone.</td>
+			</tr>
+			<tr>
+				<td>7</td><td><b><i>time_t mktime(struct tm *timeptr)</i></b><br>Converts the structure pointed to by timeptr into a time_t value according to the local time zone.</td>
+			</tr>
+			<tr>
+				<td>8</td><td><b><i>size_t strftime(char *str, size_t maxsize, const char *format, const struct tm *timeptr)</i></b><br>Formats the time represented in the structure timeptr according to the formatting rules defined in format and stored into str.</td>
+			</tr>
+			<tr>
+				<td>9</td><td><b><i>time_t time(time_t *timer)</i></b><br>Calculates the current calender time and encodes it into time_t format.</td>
+			</tr>
+			</table>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Variables</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Basic_concepts.html">
+			<a class="a1" href="Basic_concepts.html">Basic concepts</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Variables</h1>
+		<br>
+		<p class="text">Variables are used to store data in the C programming language. The variable can have type,
+						name and value.Any variable must be defined before use. The variable definition syntax is as follows:</p>
+		
+		<p class="text">1.type_name variable_name;</p>
+		
+		<p class="text">For example, the simplest definition of a variable is:</p>
+		<table border="1px" width="200px" height="20px" class="table">
+			<tr >
+				<td>1</td>
+				<td align="center">int number;</td>
+			<tr>
+		</table>
+		<p class="text">Here we define the variable number, which is of type int. Since the definition of a variable
+					is a separate expression, it is followed by a semicolon. A variable name can represent a
+					sequence of Latin alphabet characters, numbers, and an underscore. The name must begin with either
+					an alphabetic character or an underscore.</p>
+		<p class="text">Often, compilers have a variable length limit, for example, for some compilers the variable name
+		may not exceed 31 characters, for other compilers the constraint may be more stringent. It is also worth 
+		considering that C is a case-sensitive language, which means that the character register is of great importance. 
+		That is, the following code will define two different variables:</p>
+		
+		<table border="1px" width="200px" height="20px" class="table">
+			<tr >
+				<td rowspan="2">1<br><br>2</td>
+				<td align="center" rowspan="2">int number;<br><br>int Number;</td>
+			<tr>
+		</table>
+		<p class="text">Therefore, the Number variable will not represent the same as the number variable. 
+		In addition, there are a number of reserved words in the language that cannot be used as a variable name.
+		Not so many: auto, break, case, char, const, continue, default, do, double, else, enum, extern, float, for, 
+		goto, if, int, long, register, return, short, signed, sizeof , static, struct, switch, typedef, union, unsigned, 
+		void, volatile, while.</p>
+		<p class="text">Each variable is assigned an indeterminate value. But in the future, we can assign it a
+		specific meaning:</p>
+		<table border="1px" width="200px" height="20px" class="table">
+			<tr >
+				<td rowspan="2">1<br><br>2</td>
+				<td align="center" rowspan="2">int number;<br><br>number = 2;</td>
+			<tr>
+		</table>
+		<br>
+		<table border="1px" width="400px" class="table">
+			<tr >
+				<td rowspan="8">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7<br><br>8</td>
+				<td rowspan="8">#include &ltstdio.h&gt<br><br>int main(void)<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp; int number;<br><br> &nbsp;&nbsp;&nbsp;&nbsp; number = 2;<br><br> &nbsp;&nbsp;&nbsp;&nbsp;
+								printf("number = %d \n", number);<br><br> &nbsp;&nbsp;&nbsp;&nbsp; return 0;<br><br>}</td>
+			<tr>
+		</table>
+		<p class="text">To output a number to the console, the% d specifier is used, instead of which the value number is inserted.</p>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

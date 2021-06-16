@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Stdlib.h</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Standard_libraries.html">
+			<a class="a1" href="Standard_libraries.html">Standard libraries</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Stdlib.h</h1>
+		<br>
+		<p class="text">The stdlib.h header defines four variable types, several macros, and various functions for performing general functions..</p>
+			<h2 class="text_h2">Library Variables</h2>
+	<p class="text">Following are the variable types defined in the header stdlib.h −</p>
+		<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>size_t</i></b><br>This is the unsigned integral type and is the result of the sizeof keyword.</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>wchar_t</i></b><br>This is an integer type of the size of a wide character constant.</td>
+			</tr>
+			<tr>
+				<td>3</td><td><b><i>div_t</i></b><br>This is the structure returned by the div function.</td>
+			</tr>
+			<tr>
+				<td>4</td><td><b><i>ldiv_t</i></b><br>This is the structure returned by the ldiv function.</td>
+			</tr>
+		</table>
+			
+			
+			<h2 class="text_h2">Library Macros</h2>
+	<p class="text">Following are the macros defined in the header stdlib.h −</p>
+	<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>NULL</i></b><br>This macro is the value of a null pointer constant.</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>EXIT_FAILURE</i></b><br>This is the value for the exit function to return in case of failure.</td>
+			</tr>
+			<tr>
+				<td>3</td><td><b><i>EXIT_SUCCESS</i></b><br>This is the value for the exit function to return in case of success.</td>
+			</tr>
+			<tr>
+				<td>4</td><td><b><i>RAND_MAX</i></b><br>This macro is the maximum value returned by the rand function.</td>
+			</tr>
+			<tr>
+				<td>5</td><td><b><i>MB_CUR_MAX</i></b><br>This macro is the maximum number of bytes in a multi-byte character set which cannot be larger than MB_LEN_MAX.</td>
+			</tr>
+		</table>
+		
+			<h2 class="text_h2">Library Functions</h2>
+			<p class="text">Following are the functions defined in the header stlib.h −</p>
+		<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>double atof(const char *str)</i></b><br>Converts the string pointed to, by the argument str to a floating-point number (type double).</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>int atoi(const char *str)</i></b><br>Converts the string pointed to, by the argument str to an integer (type int).</td>
+			</tr>
+			<tr>
+				<td>3</td><td><b><i>long int atol(const char *str)</i></b><br>Converts the string pointed to, by the argument str to a long integer (type long int).</td>
+			</tr>
+			<tr>
+				<td>4</td><td><b><i>double strtod(const char *str, char **endptr)</i></b><br>Converts the string pointed to, by the argument str to a floating-point number (type double).</td>
+			</tr>
+			<tr>
+				<td>5</td><td><b><i>long int strtol(const char *str, char **endptr, int base)</i></b><br>Converts the string pointed to, by the argument str to a long integer (type long int).</td>
+			</tr>
+			<tr>
+				<td>6</td><td><b><i>unsigned long int strtoul(const char *str, char **endptr, int base)</i></b><br>Converts the string pointed to, by the argument str to an unsigned long integer (type unsigned long int).</td>
+			</tr>
+			<tr>
+				<td>7</td><td><b><i>void *calloc(size_t nitems, size_t size)</i></b><br>Allocates the requested memory and returns a pointer to it.</td>
+			</tr>
+			<tr>
+				<td>8</td><td><b><i>void free(void *ptr)</i></b><br>Deallocates the memory previously allocated by a call to calloc, malloc, or realloc.</td>
+			</tr>
+			<tr>
+				<td>9</td><td><b><i>void *malloc(size_t size)</i></b><br>Allocates the requested memory and returns a pointer to it.</td>
+			</tr>
+			<tr>
+				<td>10</td><td><b><i>void *realloc(void *ptr, size_t size)</i></b><br>Attempts to resize the memory block pointed to by ptr that was previously allocated with a call to malloc or calloc.</td>
+			</tr>
+			<tr>
+				<td>11</td><td><b><i>void abort(void)</i></b><br>Causes an abnormal program termination.</td>
+			</tr>
+			<tr>
+				<td>12</td><td><b><i>int atexit(void (*func)(void))</i></b><br>Causes the specified function func to be called when the program terminates normally.</td>
+			</tr>
+			<tr>
+				<td>13</td><td><b><i>void exit(int status)</i></b><br>Causes the program to terminate normally.</td>
+			</tr>
+			<tr>
+				<td>14</td><td><b><i>char *getenv(const char *name)</i></b><br>Searches for the environment string pointed to by name and returns the associated value to the string.</td>
+			</tr>
+			<tr>
+				<td>15</td><td><b><i>int system(const char *string)</i></b><br>The command specified by string is passed to the host environment to be executed by the command processor.</td>
+			</tr>
+			<tr>
+				<td>16</td><td><b><i>void *bsearch(const void *key, const void *base, size_t nitems, size_t size, int (*compar)(const void *, const void *))</i></b><br>Performs a binary search.</td>
+			</tr>
+			<tr>
+				<td>17</td><td><b><i>void qsort(void *base, size_t nitems, size_t size, int (*compar)(const void *, const void*))</i></b><br>Sorts an array.</td>
+			</tr>
+			<tr>
+				<td>18</td><td><b><i>int abs(int x)</i></b><br>Returns the absolute value of x.</td>
+			</tr>
+			<tr>
+				<td>19</td><td><b><i>div_t div(int numer, int denom)</i></b><br>Divides numer (numerator) by denom (denominator).</td>
+			</tr>
+			<tr>
+				<td>20</td><td><b><i>long int labs(long int x)</i></b><br>Returns the absolute value of x.</td>
+			</tr>
+			<tr>
+				<td>21</td><td><b><i>ldiv_t ldiv(long int numer, long int denom)</i></b><br>Divides numer (numerator) by denom (denominator).</td>
+			</tr>
+			<tr>
+				<td>22</td><td><b><i>int rand(void)</i></b><br>Returns a pseudo-random number in the range of 0 to RAND_MAX.</td>
+			</tr>
+			<tr>
+				<td>23</td><td><b><i>void srand(unsigned int seed)</i></b><br>This function seeds the random number generator used by the function rand.</td>
+			</tr>
+			<tr>
+				<td>24</td><td><b><i>int mblen(const char *str, size_t n)</i></b><br>Returns the length of a multibyte character pointed to by the argument str.</td>
+			</tr>
+			<tr>
+				<td>25</td><td><b><i>size_t mbstowcs(schar_t *pwcs, const char *str, size_t n)</i></b><br>Converts the string of multibyte characters pointed to by the argument str to the array pointed to by pwcs.</td>
+			</tr>
+			<tr>
+				<td>26</td><td><b><i>int mbtowc(whcar_t *pwc, const char *str, size_t n)</i></b><br>Examines the multibyte character pointed to by the argument str.</td>
+			</tr>
+			<tr>
+				<td>27</td><td><b><i>size_t wcstombs(char *str, const wchar_t *pwcs, size_t n)</i></b><br>Converts the codes stored in the array pwcs to multibyte characters and stores them in the string str.</td>
+			</tr>
+			<tr>
+				<td>28</td><td><b><i>int wctomb(char *str, wchar_t wchar)</i></b><br>Examines the code which corresponds to a multibyte character given by the argument wchar.</td>
+			</tr>
+			</table>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Math.h</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Standard_libraries.html">
+			<a class="a1" href="Standard_libraries.html">Standard libraries</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Math.h</h1>
+		<br>
+		<p class="text">The math.h header defines various mathematical functions and one macro. All the functions available in this library take double as an argument and return double as the result.</p>
+			<h2 class="text_h2">Library Macros</h2>
+	<p class="text">There is only one macro defined in this library −</p>
+	<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>HUGE_VAL</i></b><br>This macro is used when the result of a function may not be representable as a floating point number. If magnitude of the correct result is too large to be represented, the function sets errno to ERANGE to indicate a range error, and returns a particular, very large value named by the macro HUGE_VAL or its negation (- HUGE_VAL).<br>If the magnitude of the result is too small, a value of zero is returned instead. In this case, errno might or might not be set to ERANGE.</td>
+			</tr>
+		</table>
+		
+			<h2 class="text_h2">Library Functions</h2>
+			<p class="text">Following are the functions defined in the header math.h −</p>
+		<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>double acos(double x)</i></b><br>Returns the arc cosine of x in radians.</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>double asin(double x)</i></b><br>Returns the arc sine of x in radians.</td>
+			</tr>
+			<tr>
+				<td>3</td><td><b><i>double atan(double x)</i></b><br>Returns the arc tangent of x in radians.</td>
+			</tr>
+			<tr>
+				<td>4</td><td><b><i>double atan2(double y, double x)</i></b><br>Returns the arc tangent in radians of y/x based on the signs of both values to determine the correct quadrant.</td>
+			</tr>
+			<tr>
+				<td>5</td><td><b><i>double cos(double x)</i></b><br>Returns the cosine of a radian angle x.</td>
+			</tr>
+			<tr>
+				<td>6</td><td><b><i>double cosh(double x)</i></b><br>Returns the hyperbolic cosine of x.</td>
+			</tr>
+			<tr>
+				<td>7</td><td><b><i>double sin(double x)</i></b><br>Returns the sine of a radian angle x.</td>
+			</tr>
+			<tr>
+				<td>8</td><td><b><i>double sinh(double x)</i></b><br>Returns the hyperbolic sine of x.</td>
+			</tr>
+			<tr>
+				<td>9</td><td><b><i>double tanh(double x)</i></b><br>Returns the hyperbolic tangent of x.</td>
+			</tr>
+			<tr>
+				<td>10</td><td><b><i>double exp(double x)</i></b><br>Returns the value of e raised to the xth power.</td>
+			</tr>
+			<tr>
+				<td>11</td><td><b><i>double frexp(double x, int *exponent)</i></b><br>The returned value is the mantissa and the integer pointed to by exponent is the exponent. The resultant value is x = mantissa * 2 ^ exponent.</td>
+			</tr>
+			<tr>
+				<td>12</td><td><b><i>double ldexp(double x, int exponent)</i></b><br>Returns x multiplied by 2 raised to the power of exponent.</td>
+			</tr>
+			<tr>
+				<td>13</td><td><b><i>	double log(double x)</i></b><br>Returns the natural logarithm (base-e logarithm) of x.</td>
+			</tr>
+			<tr>
+				<td>14</td><td><b><i>double log10(double x)</i></b><br>Returns the common logarithm (base-10 logarithm) of x.</td>
+			</tr>
+			<tr>
+				<td>15</td><td><b><i>double modf(double x, double *integer)</i></b><br>The returned value is the fraction component (part after the decimal), and sets integer to the integer component.</td>
+			</tr>
+			<tr>
+				<td>16</td><td><b><i>double pow(double x, double y)</i></b><br>Returns x raised to the power of y.</td>
+			</tr>
+			<tr>
+				<td>17</td><td><b><i>double sqrt(double x)</i></b><br>Returns the square root of x.</td>
+			</tr>
+			<tr>
+				<td>18</td><td><b><i>double ceil(double x)</i></b><br>Returns the smallest integer value greater than or equal to x.</td>
+			</tr>
+			<tr>
+				<td>19</td><td><b><i>double fabs(double x)</i></b><br>Returns the absolute value of x.</td>
+			</tr>
+			<tr>
+				<td>20</td><td><b><i>double floor(double x)</i></b><br>Returns the largest integer value less than or equal to x.</td>
+			</tr>
+			<tr>
+				<td>21</td><td><b><i>double fmod(double x, double y)</i></b><br>Returns the remainder of x divided by y.</td>
+			</tr>
+			</table>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

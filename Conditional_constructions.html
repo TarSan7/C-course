@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Conditional constructions</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Basic_concepts.html">
+			<a class="a1" href="Basic_concepts.html">Basic concepts</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Conditional constructions</h1>
+		<br>
+		<h2 class="text_h2">If construct</h2>
+		<p class="text">Conditional designs allow you to direct the program along one of the possible paths, 
+						depending on the condition. There are several operators in the C language that allow this.</p>
+		<p class="text">The if statement checks if the condition is true, and if it is true, it executes 
+						a block of instructions. This statement has the following abbreviated form:</p>
+		<p class="text"> if (выражение_условия) инструкция;</p>
+		<p class="text">An arithmetic, logical, or comparison operation can be used as condition_expression.
+						And if this operation returns a nonzero value (that is, the expression is true), then the 
+						following statement is executed:</p>
+		<table border="1px" width="500px" class="table">
+			<tr >
+				<td rowspan="8">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7<br><br>8</td>
+				<td rowspan="8">#include &ltstdio.h&gt<br><br>int main(void)<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp;int x = 60;
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if(x > 50) printf("x is greater than 50 \n");<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if(x < 30) printf("x is less than 30 \n");
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br><br>}</td>
+			</tr>
+		</table>
+		<p class="text">Two conditional if constructs are used here. They will check for more or less the value of the variable x than a specific value.
+						In both cases, the printf function is executed as an instruction.</p>
+		<p class="text">In the first case, x> 50, the condition is true, since the value of the variable x is really greater than 50, so this comparison 
+						operation will return 1, and therefore the next instruction will be executed.</p>
+		<p class="text">In the second case, the comparison operation x &lt30 will return 0, since the condition is false, so the subsequent 
+						instruction will not be executed. Therefore, only one line will be displayed on the console</p>
+		<p class="text">If in the if construct it is necessary to execute not one, but several instructions, then these instructions are 
+						executed in a block of code using curly braces.</p>
+		<table border="1px" width="400px" class="table">
+			<tr >
+				<td rowspan="6">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6</td>
+				<td rowspan="6">int x = 60;<br><br>if(x > 50) <br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp;printf("if statement \n");
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;printf("x is greater than 50 \n");<br><br>}</td>
+			</tr>
+		</table>
+		<p class="text">After the else statement, we can define a set of instructions that are executed if the 
+						condition_expression is false, that is, returns 0. That is, if the condition_expression is true,
+						the statement will be executed after the if statement, and if this expression is false, the 
+						instruction will be executed after the else statement.</p>
+		<h2 class="text_h2">Switch construct</h2>
+		<p class="text">Another form of branching programs is the switch ... case construct. It has the following form:</p>
+		<table border="1px" width="400px" class="table">
+			<tr >
+				<td rowspan="6">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6</td>
+				<td rowspan="6">switch (expression)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;case constant_1: instructions_1;<br><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;case constant_2: instructions_2;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;default: instructions;<br><br>}</td>
+			</tr>
+		</table>
+		<p class="text">After the switch keyword, the compared expression is in parentheses. The value of this expression is sequentially compared 
+						with the values ​​placed after the case statement. And if a match is found, a specific case block will be 
+						executed.</p>
+		<p class="text">At the end of the switch construct, there may be a default block. It is optional and is executed 
+						if no matches were found in case blocks.</p>
+		<p class="text">To avoid executing subsequent case / default blocks, a break statement is placed at the end of each block.</p>
+		<h2 class="text_h2">Ternary operator</h2>
+		<p class="text">The ternary operator ?: Reduces the definition of the simplest conditional constructions if and has 
+						the following form:</p>
+		<p class="text"><em>[first operand condition] ? [second operand] : [third operand]</em></p>
+		<p class="text">The operator uses three operands at once. Depending on the condition, the ternary operator returns
+						the second or third operand: if the condition is 1 (that is, true), then the second operand is 
+						returned; if the condition is 0 (i.e. false), then the third.</p>
+						
+		
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

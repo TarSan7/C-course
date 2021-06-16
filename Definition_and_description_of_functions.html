@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Definition and description of functions</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Functions.html">
+			<a class="a1" href="Functions.html">Functions</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1 class="text_h1">Definition and description of functions</h1>
+		<br>
+		<p class="text">If variables and constants store the state of the program, then the functions determine its actions.</p>
+		<p class="text">A formal definition of a function is as follows:</p>
+		<table border="1px" width="600px" class="table">
+			<tr >
+				<td rowspan="4">1<br><br>2<br><br>3<br><br>4</td>
+				<td rowspan="4">type function_name (parameters)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;executable_expressions<br><br>}</td>
+			</tr>
+		</table>
+		
+		<p class="text">The first line represents the title or signature of the function. The return type of the function is indicated first. If the function does not return any value, then the void type is used.</p>
+		<p class="text">Then comes the name of the function, which represents an arbitrary identifier, to which the same rules apply as for naming variables.</p>
+		<p class="text">After the function name in brackets there is an enumeration of parameters. The function may not have parameters, in this case empty brackets are indicated.</p>
+		<p class="text">After the function header in curly brackets is the body of the function, which contains the executable expressions.</p>
+		<p class="text">To return the result, the function uses the return statement, which has the following uses:</p>
+		<table border="1px" width="600px" class="table">
+			<tr >
+				<td rowspan="2">1<br><br>2</td>
+				<td rowspan="2">return ;<br><br>return expression;</td>
+			</tr>
+		</table>
+		<p class="text">The first form can be used in those functions that do not return any value, that is, they have void as the return type.</p>
+		<p class="text">The second form applies if the function has any type except void as the return type. The expression after the return statement represents the return value.</p>
+		<p class="text">To perform a function, it must be called. The function call is carried out in the form:</p>
+		<p class="text"><em><b>function_name (arguments);</b></em></p>
+		<p class="text">After the name of the function, brackets are indicated in which the arguments are listed - values ​​for the parameters of the function.</p>
+		<p class="text">We define the simplest function:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td rowspan="11">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7<br><br>8<br><br>9<br><br>10<br><br>11</td>
+				<td rowspan="11">#include &ltstdio.h&gt<br><br>void hello()<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp; printf("Hello!\n");
+						<br><br>}<br><br>int main(void)<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp; hello();
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp; hello();<br><br>&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br><br>}</td>
+			</tr>
+		</table>
+		<p class="text">The hello function is defined here, which simply prints the string "Hello!" To the console. This function is of type void, that is, in fact, it returns nothing.</p>
+		<p class="text">Any program must have at least one function that has a fixed name main (). It is with the main function that execution begins. Therefore, if we want to execute the hello function, then we need to call it in the main function.</p>
+		<p class="text">It is also worth noting that the main function has the type int as the return type, so it must necessarily return some value of the int type using the return statement. Therefore, at the end of the body of the function is a call to return 0 ;. According to conventions, as an indicator of successful execution, the main function returns the number 0.</p>
+		
+		<h2 class="text_h2">Function prototype or description</h2>
+		<p class="text">Here it is worth considering an important point - the compiler must know about the function before calling it. Therefore, a function call must occur after its definition, as in the case above. In some languages ​​this does not matter, but in the C language it plays a big role. And if, for example, we first call, and then define a function, then we will get an error at the compilation stage, as in the following case:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td rowspan="11">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7<br><br>8<br><br>9<br><br>10</td>
+				<td rowspan="11"><br>int main(void)<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp; hello();
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp; hello();<br><br>&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br><br>}<br><br>void hello()<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp; printf("Hello!\n");
+						<br><br>}<br><br></td>
+			</tr>
+		</table>
+		<p class="text">But there is another way, which is to use the function description. The description of the function is also called the prototype. This is actually the function header. We apply the function prototype:</p>
+		<table border="1px" width="300px" class="table">
+			<tr>
+				<td rowspan="14">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7<br><br>8<br><br>9<br><br>10<br><br>11<br><br>12<br><br>13<br><br>14</td>
+				<td rowspan="14"><br>#include &ltstdio.h&gt<br><br>&nbsp; // description<br><br> &nbsp;void hello();<br><br>&nbsp; int main(void)<br><br> &nbsp;{<br><br> &nbsp;&nbsp;&nbsp;&nbsp; hello();
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp; hello();<br><br>&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br><br>&nbsp; }<br><br>&nbsp; // definition<br><br> &nbsp;void hello()<br><br> &nbsp;{<br><br> &nbsp;&nbsp;&nbsp;&nbsp; printf("Hello!\n");
+						<br><br> &nbsp;}<br><br></td>
+			</tr>
+		</table>
+		
+		<p class="text">In this case, despite the fact that the definition of the function goes after its call, but since its description goes before the call, the compiler will already know about the hello function, and there will be no problems with the program.</p>
+		
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

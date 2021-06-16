@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Input (output) data</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Basic_concepts.html">
+			<a class="a1" href="Basic_concepts.html">Basic concepts</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Input (output) data</h1>
+		<br>
+		<h2 class="text_h2">Input to the console. Scanf function</h2>
+		<p class="text">The scanf () function can be used to enter data into the console. 
+						This function is defined in the stdio.h header file (in the same place as 
+						the printf function) and has the following formal definition:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td>1</td>
+				<td>scanf(форматная_строка, аргументы);</td>
+			</tr>
+		</table>
+		<p class="text">Both format_string and arguments to the scanf function are required. Format_String
+						contains conversion specifications that define the input. </p>
+		<p class="text">The specifier determines the type of input data:</p>
+		<ul class="text">
+			<li>% c: read one character</li>
+			<li>% d: read decimal integer</li>
+			<li>% i: reads an integer in any system (decimal, hexadecimal, octal)</li>
+			<li>% u: reads a positive integer</li>
+			<li>% e: read exponentially floating point number</li>
+			<li>% E: read exponentially floating-point number with exponent capital</li>
+			<li>% f: reads a floating-point number</li>
+			<li>% F: reads a floating point number</li>
+			<li>% g: read floating point number</li>
+			<li>% G: reads a floating point number</li>
+			<li>% o: reads an octal number</li>
+			<li>% x: reads a hexadecimal number</li>
+			<li>% X: reads a hexadecimal number</li>
+			<li>% s: read line</li>
+			<li>%%: read percent symbol</li>
+		</ul>
+		<p class="text">The asterisk * in the conversion specification allows you
+						to skip typed characters when entering for the type specified through the specifier.</p>
+		<p class="text">Field_width represents a positive integer that allows you to determine how many bytes will
+						be taken into account when entering.</p>
+		<p class="text">Modifiers allow you to specify the data type. In particular, there are the following modifiers:</p>
+		<ul class="text">
+			<li>h: to enter values ​​of type short int (% hd)</li>
+			<li>l: to enter values ​​of type long int (% ld) or double (% lf,% le)</li>
+			<li>L: to enter values ​​of type long double (% Lf,% Le)</li>
+		</ul>
+		<p class="text">The arguments to the scanf () function are the addresses of the variable that will receive
+						the entered value. To get the address of a variable, an ampersand & is placed before its name. 
+						For example, if the variable is called age, then we can get its address using the & age expression.</p>
+		<p class="text">You can enter several values ​​at once. In this case, a space is used as the delimiter.</p>
+		
+		
+		<h2 class="text_h2">Console output. Printf function</h2>
+		<p class="text">To print to the console in the C programming language, the printf () function is often used. 
+						But if there are no special problems with the output of a simple string, then the output of data
+						of other types has its own peculiarities.</p>
+		<p class="text">The formal definition of the printf function is as follows:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td>1</td>
+				<td>printf (format_string, argument_list);</td>
+			</tr>
+		</table>
+		<p class="text">In addition to standard text, we can pass special groups of characters called control
+						sequences to a string. The most common ones are:</p>
+		<ul class="text">
+			<li>\ n: newline</li>
+			<li>\ t: tab</li>
+			<li>\ r: carriage return (cursor) to the beginning of the line</li>
+			<li>\\: backslash</li>
+			<li>\ ': single quote</li>
+			<li>\ ": double quote</li>
+		</ul>
+		<p class="text">Additionally, you can use flags that additionally allow you to control the formatting of the output:</p>
+		<ul class="text">
+			<li>+: if the displayed value has a sign (+ or -), then it is displayed. Without this flag, 
+				the sign is displayed only if the value is negative.</li>
+			<li>space: inserts a space in the place of the character in front of positive numbers</li>
+			<li>#: when used with the qualifiers "o", "x", "X", the value of the number is displayed with
+				the preceding characters 0, 0x or 0X. When used with the qualifiers "f", "g", "G", the decimal 
+				point will be displayed, even if there is no fractional part in the number</li>
+		</ul>
+		
+		
+		
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

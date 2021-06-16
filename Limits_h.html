@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Limits.h</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Standard_libraries.html">
+			<a class="a1" href="Standard_libraries.html">Standard libraries</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>C Library - limits.h </h1>
+		<br>
+		<p class="text">The limits.h header determines various properties of the various variable types. The macros defined in this header, limits the values of various variable types like char, int and long.
+
+        These limits specify that a variable cannot store any value beyond these limits, for example an unsigned character can store up to a maximum value of 255.</p>
+        <h2>Library Macros</h2>
+		<table border="1px" width="1000px" class="table">
+			<tr> 
+			<td>Macro<td>Value<td>Description</tr>
+			<tr>
+			<td>CHAR_BIT<td>8<td>Defines the number of bits in a byte.</tr>
+			<tr>
+			<td>SCHAR_MIN<td>-128<td>Defines the minimum value for a signed char.</tr>
+			<tr>
+			<td>SCHAR_MAX<td>+127<td>Defines the maximum value for a signed char.</tr>
+			<tr>
+			<td>UCHAR_MAX<td>255<td>Defines the maximum value for an unsigned char.</tr>
+			<tr>
+			<td>CHAR_MIN<td>-128<td>Defines the minimum value for type char and its value will be equal to SCHAR_MIN if char represents negative values, otherwise zero.</tr>
+			<tr>
+			<td>CHAR_MAX<td>+127<td>Defines the value for type char and its value will be equal to SCHAR_MAX if char represents negative values, otherwise UCHAR_MAX.</tr>
+			<tr>
+			<td>MB_LEN_MAX<td>16<td>Defines the maximum number of bytes in a multi-byte character.</tr>
+			<tr>
+			<td>SHRT_MIN<td>-32768<td>Defines the minimum value for a short int.</tr>
+			<tr>
+			<td>SHRT_MAX<td>+32767<td>Defines the maximum value for a short int.</tr>
+			<tr>
+			<td>USHRT_MAX<td>65535<td>Defines the maximum value for an unsigned short int.</tr>
+			<tr>
+			<td>INT_MIN<td>-2147483648<td>Defines the minimum value for an int.</tr>
+			<tr>
+			<td>INT_MAX<td>+2147483647<td>Defines the maximum value for an int.</tr>
+			<tr>
+			<td>UINT_MAX<td>4294967295<td>Defines the maximum value for an unsigned int.</tr>
+			<tr>
+			<td>LONG_MIN<td>-9223372036854775808<td>Defines the minimum value for a long int.</tr>
+			<tr>
+			<td>LONG_MAX<td>+9223372036854775807<td>Defines the maximum value for a long int.</tr>
+			<tr>
+			<td>ULONG_MAX<td>18446744073709551615<td>Defines the maximum value for an unsigned long int.
+			</tr>
+			</table>
+		
+		<h2>Example</h2>
+		<p class="text">The following example shows the usage of few of the constants defined in limits.h file.<p>
+		<pre class="lim">
+		#include &ltstdio.h&gt
+		#include &ltlimits.h&gt
+
+		int main() {
+
+		   printf("The number of bits in a byte %d\n", CHAR_BIT);
+
+		   printf("The minimum value of SIGNED CHAR = %d\n", SCHAR_MIN);
+		   printf("The maximum value of SIGNED CHAR = %d\n", SCHAR_MAX);
+		   printf("The maximum value of UNSIGNED CHAR = %d\n", UCHAR_MAX);
+
+		   printf("The minimum value of SHORT INT = %d\n", SHRT_MIN);
+		   printf("The maximum value of SHORT INT = %d\n", SHRT_MAX); 
+
+		   printf("The minimum value of INT = %d\n", INT_MIN);
+		   printf("The maximum value of INT = %d\n", INT_MAX);
+
+		   printf("The minimum value of CHAR = %d\n", CHAR_MIN);
+		   printf("The maximum value of CHAR = %d\n", CHAR_MAX);
+
+		   printf("The minimum value of LONG = %ld\n", LONG_MIN);
+		   printf("The maximum value of LONG = %ld\n", LONG_MAX);
+		  
+		   return(0);
+		}</pre>
+		<p class="text">Let us compile and run the above program that will produce the following result −</p>
+	<pre class="lim">		The maximum value of UNSIGNED CHAR = 255                                    
+		The minimum value of SHORT INT = -32768                                     
+		The maximum value of SHORT INT = 32767                                      
+		The minimum value of INT = -2147483648                                      
+		The maximum value of INT = 2147483647                                       
+		The minimum value of CHAR = -128                                            
+		The maximum value of CHAR = 127                                             
+		The minimum value of LONG = -9223372036854775808                            
+		The maximum value of LONG = 9223372036854775807
+	</pre>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Passing parameters and returning the result</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Functions.html">
+			<a class="a1" href="Functions.html">Functions</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1 class="text_h1">Passing parameters and returning the result</h1>
+		<br>
+		<p class="text">The function can take parameters. The parameters are listed in brackets after the function name have the following definition:</p>
+		<p class="text"><em><b>type parameter_name</em></b></p>
+		<p class="text">For example, we define a factorial calculation function:</p>
+		<pre class="lim">
+		#include &ltstdio.h&gt
+ 
+		void factorial(int n)
+		{
+			int result = 1;
+			for(int i=1;i&lt=n;i++)
+			{
+				result *= i;
+			}
+			printf("factorial of %d is equal %d \n", n, result);
+		}
+		 
+		int main(void)
+		{
+			factorial(4);
+			factorial(6);
+			return 0;
+		}
+		</pre>
+		<p class="text">The factorial function takes one parameter, which has the name n and type int.</p>
+		<p class="text">In the main method, this function is called twice, and each time a new value for parameter n is passed to it. The passed value for the parameter is also called an argument. As a result, the console function is the factorials of numbers 4 and 6</p>
+		<p class="text">If several parameters are needed, they are listed with a comma. For example, we write a program simulating a currency exchange:</p>
+		<pre class="lim">
+		#include &ltstdio.h&gt
+ 
+		void exchange(double currate, double sum)
+		{
+			double result = sum / currate;
+			printf("result=%.2f \n", result);
+		}
+		 
+		int main(void)
+		{
+			double rate;
+			double sum;
+			
+			printf("Currency rate:");
+			scanf("%lf", &rate);
+		 
+		 
+			printf("Sum:");
+			scanf("%lf", &sum);
+		 
+			exchange(rate, sum);
+			 
+			exchange(56.87, 2000);
+			 
+			return 0;
+		}
+		</pre>
+		<p class="text">Using the scanf () function, console input is applied to the rate and sum variables, then these variables are passed to the exchange function as arguments. Variables used as arguments do not have to be named exactly like function parameters. The correspondence between arguments and parameters is established by their location: the first argument passes the value for the first parameter, the second argument for the second parameter, and so on. And besides, here the second call to the exchange function takes numeric constants as arguments.</p>
+		<p class="text">A function may return some specific value. For example, we modify the factorial function to return a calculated value:</p>
+		<pre class="lim">
+		#include &ltstdio.h&gt
+ 
+		int factorial(int n)
+		{
+			int result = 1;
+			for(int i=1;i&lt=n;i++)
+			{
+				result *= i;
+			}
+			return result;
+		}
+		int main(void)
+		{
+			int arg,f;
+			 
+			arg = 4;
+			f = factorial(arg);
+			printf("factorial of %d is equal %d \n", arg, f);
+			 
+			arg = 6;
+			f = factorial(arg);
+			printf("factorial of %d is equal %d \n", arg, f);
+			 
+			return 0;
+		}
+		</pre>
+		<p class="text">The factorial function now has an int type as the return type. If the type of the function is different from void, then the function must return a value of this type. To return a value, the return statement is used, after which the return value is indicated.</p>
+		<p class="text">In this case, the factorial function returns the value of the result variable, which contains the factorial of the number.</p>
+		<p class="text">If the function returns a value, then when we call it, we can get this value in a variable</p>
+		<p class="text">As with the parameters and arguments of a function, the return value must match the type of the function. If there is no such correspondence, the compiler tries to convert the return value to the type of the function:</p>
+		<pre class="lim">
+		#include &ltstdio.h&gt
+ 
+		int exchange(double rate, double sum)
+		{
+			return sum/rate;
+		}
+		 
+		int main(void)
+		{
+			printf("%d \n", exchange(56.83, 24560));
+			 
+			return 0;
+		}
+		</pre>
+		<p class="text">In this case, the exchange function returns an object of type int, but the return value described by the expression sum / rate will be of type double, so in this case, the compiler will automatically perform the conversion.</p>
+		
+		
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

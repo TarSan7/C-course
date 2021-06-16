@@ -1,0 +1,207 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Stdio.h</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Standard_libraries.html">
+			<a class="a1" href="Standard_libraries.html">Standard libraries</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Stdio.h</h1>
+		<br>
+		<p class="text">The stdio.h header defines three variable types, several macros, and various functions for performing input and output.</p>
+			<h2 class="text_h2">Library Variables</h2>
+	<p class="text">Following are the variable types defined in the header stdio.h −</p>
+		<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>size_t</i></b><br>This is the unsigned integral type and is the result of the sizeof keyword.</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>FILE</i></b><br>This is an object type suitable for storing information for a file stream.</td>
+			</tr>
+			<tr>
+				<td>3</td><td><b><i>fpos_t</i></b><br>This is an object type suitable for storing any position in a file.</td>
+			</tr>
+		</table>
+			
+			
+			<h2 class="text_h2">Library Macros</h2>
+	<p class="text">Following are the macros defined in the header stdio.h −</p>
+	<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>NULL</i></b><br>This macro is the value of a null pointer constant.</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>_IOFBF, _IOLBF and _IONBF</i></b><br>These are the macros which expand to integral constant expressions with distinct values and suitable for the use as third argument to the setvbuf function.</td>
+			</tr>
+			<tr>
+				<td>3</td><td><b><i>BUFSIZ</i></b><br>This macro is an integer, which represents the size of the buffer used by the setbuf function.</td>
+			</tr>
+			<tr>
+				<td>4</td><td><b><i>EOF</i></b><br>This macro is a negative integer, which indicates that the end-of-file has been reached.</td>
+			</tr>
+			<tr>
+				<td>5</td><td><b><i>FOPEN_MAX</i></b><br>This macro is an integer, which represents the maximum number of files that the system can guarantee to be opened simultaneously.</td>
+			</tr>
+			<tr>
+				<td>6</td><td><b><i>FILENAME_MAX</i></b><br>This macro is an integer, which represents the longest length of a char array suitable for holding the longest possible filename. If the implementation imposes no limit, then this value should be the recommended maximum value.</td>
+			</tr>
+			<tr>
+				<td>7</td><td><b><i>L_tmpnam</i></b><br>This macro is an integer, which represents the longest length of a char array suitable for holding the longest possible temporary filename created by the tmpnam function.</td>
+			</tr>
+			<tr>
+				<td>8</td><td><b><i>SEEK_CUR, SEEK_END, and SEEK_SET</i></b><br>These macros are used in the fseek function to locate different positions in a file.</td>
+			</tr>
+			<tr>
+				<td>9</td><td><b><i>TMP_MAX</i></b><br>This macro is the maximum number of unique filenames that the function tmpnam can generate.</td>
+			</tr>
+			<tr>
+				<td>10</td><td><b><i>stderr, stdin, and stdout</i></b><br>These macros are pointers to FILE types which correspond to the standard error, standard input, and standard output streams.</td>
+			</tr>
+			
+		</table>
+		
+			<h2 class="text_h2">Library Functions</h2>
+			<p class="text">Following are the functions defined in the header stdio.h −</p>
+		<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>int fclose(FILE *stream)</i></b><br>Closes the stream. All buffers are flushed.</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>void clearerr(FILE *stream)</i></b><br>Clears the end-of-file and error indicators for the given stream.</td>
+			</tr>
+			<tr>
+				<td>3</td><td><b><i>int feof(FILE *stream)</i></b><br>Tests the end-of-file indicator for the given stream.</td>
+			</tr>
+			<tr>
+				<td>4</td><td><b><i>int ferror(FILE *stream)</i></b><br>Tests the error indicator for the given stream.</td>
+			</tr>
+			<tr>
+				<td>5</td><td><b><i>int fflush(FILE *stream)</i></b><br>Flushes the output buffer of a stream.</td>
+			</tr>
+			<tr>
+				<td>6</td><td><b><i>int fgetpos(FILE *stream, fpos_t *pos)</i></b><br>Gets the current file position of the stream and writes it to pos.</td>
+			</tr>
+			<tr>
+				<td>7</td><td><b><i>FILE *fopen(const char *filename, const char *mode)</i></b><br>Opens the filename pointed to by filename using the given mode.</td>
+			</tr>
+			<tr>
+				<td>8</td><td><b><i>size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)</i></b><br>Reads data from the given stream into the array pointed to by ptr.</td>
+			</tr>
+			<tr>
+				<td>9</td><td><b><i>FILE *freopen(const char *filename, const char *mode, FILE *stream)</i></b><br>Associates a new filename with the given open stream and same time closing the old file in stream.</td>
+			</tr>
+			<tr>
+				<td>10</td><td><b><i>int fseek(FILE *stream, long int offset, int whence)</i></b><br>Sets the file position of the stream to the given offset. The argument offset signifies the number of bytes to seek from the given whence position.</td>
+			</tr>
+			<tr>
+				<td>11</td><td><b><i>int fsetpos(FILE *stream, const fpos_t *pos)</i></b><br>Sets the file position of the given stream to the given position. The argument pos is a position given by the function fgetpos.</td>
+			</tr>
+			<tr>
+				<td>12</td><td><b><i>long int ftell(FILE *stream)</i></b><br>Returns the current file position of the given stream.</td>
+			</tr>
+			<tr>
+				<td>13</td><td><b><i>size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)</i></b><br>Writes data from the array pointed to by ptr to the given stream.</td>
+			</tr>
+			<tr>
+				<td>14</td><td><b><i>int remove(const char *filename)</i></b><br>Deletes the given filename so that it is no longer accessible.</td>
+			</tr>
+			<tr>
+				<td>15</td><td><b><i>int rename(const char *old_filename, const char *new_filename)</i></b><br>Causes the filename referred to, by old_filename to be changed to new_filename.</td>
+			</tr>
+			<tr>
+				<td>16</td><td><b><i>void rewind(FILE *stream)</i></b><br>Sets the file position to the beginning of the file of the given stream.</td>
+			</tr>
+			<tr>
+				<td>17</td><td><b><i>void setbuf(FILE *stream, char *buffer)</i></b><br>Defines how a stream should be buffered.</td>
+			</tr>
+			<tr>
+				<td>18</td><td><b><i>int setvbuf(FILE *stream, char *buffer, int mode, size_t size)</i></b><br>Another function to define how a stream should be buffered.</td>
+			</tr>
+			<tr>
+				<td>19</td><td><b><i>FILE *tmpfile(void)</i></b><br>Creates a temporary file in binary update mode (wb+).</td>
+			</tr>
+			<tr>
+				<td>20</td><td><b><i>char *tmpnam(char *str))</i></b><br>Generates and returns a valid temporary filename which does not exist.</td>
+			</tr>
+			<tr>
+				<td>21</td><td><b><i>int fprintf(FILE *stream, const char *format, ...)</i></b><br>Sends formatted output to a stream.</td>
+			</tr>
+			<tr>
+				<td>22</td><td><b><i>int printf(const char *format, ...)</i></b><br>Sends formatted output to stdout.</td>
+			</tr>
+			<tr>
+				<td>23</td><td><b><i>int sprintf(char *str, const char *format, ...)</i></b><br>Sends formatted output to a string.</td>
+			</tr>
+			<tr>
+				<td>24</td><td><b><i>int vfprintf(FILE *stream, const char *format, va_list arg)</i></b><br>Sends formatted output to a stream using an argument list.</td>
+			</tr>
+			<tr>
+				<td>25</td><td><b><i>int vprintf(const char *format, va_list arg)</i></b><br>Sends formatted output to stdout using an argument list.</td>
+			</tr>
+			<tr>
+				<td>26</td><td><b><i>int vsprintf(char *str, const char *format, va_list arg)</i></b><br>Sends formatted output to a string using an argument list.</td>
+			</tr>
+			<tr>
+				<td>27</td><td><b><i>int fscanf(FILE *stream, const char *format, ...)</i></b><br>Reads formatted input from a stream.</td>
+			</tr>
+			<tr>
+				<td>28</td><td><b><i>int scanf(const char *format, ...)</i></b><br>Reads formatted input from stdin.</td>
+			</tr>
+			<tr>
+				<td>29</td><td><b><i>int sscanf(const char *str, const char *format, ...)</i></b><br>Reads formatted input from a string.</td>
+			</tr>
+			<tr>
+				<td>30</td><td><b><i>int fgetc(FILE *stream)</i></b><br>Gets the next character (an unsigned char) from the specified stream and advances the position indicator for the stream.</td>
+			</tr>
+			<tr>
+				<td>31</td><td><b><i>char *fgets(char *str, int n, FILE *stream)</i></b><br>Reads a line from the specified stream and stores it into the string pointed to by str. It stops when either (n-1) characters are read, the newline character is read, or the end-of-file is reached, whichever comes first.</td>
+			</tr>
+			<tr>
+				<td>32</td><td><b><i>int fputc(int char, FILE *stream)</i></b><br>Writes a character (an unsigned char) specified by the argument char to the specified stream and advances the position indicator for the stream.</td>
+			</tr>
+			<tr>
+				<td>33</td><td><b><i>int fputs(const char *str, FILE *stream)</i></b><br>Writes a string to the specified stream up to but not including the null character.</td>
+			</tr>
+			<tr>
+				<td>34</td><td><b><i>int getc(FILE *stream)</i></b><br>Gets the next character (an unsigned char) from the specified stream and advances the position indicator for the stream.</td>
+			</tr>
+			<tr>
+				<td>35</td><td><b><i>int getchar(void)</i></b><br>Gets a character (an unsigned char) from stdin.</td>
+			</tr>
+			<tr>
+				<td>36</td><td><b><i>char *gets(char *str)</i></b><br>Reads a line from stdin and stores it into the string pointed to by, str. It stops when either the newline character is read or when the end-of-file is reached, whichever comes first.</td>
+			</tr>
+			<tr>
+				<td>37</td><td><b><i>int putc(int char, FILE *stream)</i></b><br>Writes a character (an unsigned char) specified by the argument char to the specified stream and advances the position indicator for the stream.</td>
+			</tr>
+			<tr>
+				<td>38</td><td><b><i>int putchar(int char)</i></b><br>Writes a character (an unsigned char) specified by the argument char to stdout.</td>
+			</tr>
+			<tr>
+				<td>39</td><td><b><i>int puts(const char *str)</i></b><br>Writes a string to stdout up to but not including the null character. A newline character is appended to the output.</td>
+			</tr>
+			<tr>
+				<td>40</td><td><b><i>int ungetc(int char, FILE *stream)</i></b><br>Pushes the character char (an unsigned char) onto the specified stream so that the next character is read.</td>
+			</tr>
+			<tr>
+				<td>41</td><td><b><i>void perror(const char *str)</i></b><br>Prints a descriptive error message to stderr. First the string str is printed followed by a colon and then a space.</td>
+			</tr>
+			</table>
+			<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>String.h</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Standard_libraries.html">
+			<a class="a1" href="Standard_libraries.html">Standard libraries</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>String.h</h1>
+		<br>
+		<p class="text">The string.h header defines one variable type, one macro, and various functions for manipulating arrays of characters.</p>
+			<h2 class="text_h2">Library Variables</h2>
+	<p class="text">Following is the variable type defined in the header string.h −</p>
+		<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>size_t</i></b><br>This is the unsigned integral type and is the result of the sizeof keyword.</td>
+			</tr>
+		</table>
+			
+			
+			<h2 class="text_h2">Library Macros</h2>
+	<p class="text">Following are the macros defined in the header stdio.h −</p>
+	<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>NULL</i></b><br>This macro is the value of a null pointer constant.</td>
+			</tr>
+		</table>
+		
+			<h2 class="text_h2">Library Functions</h2>
+			<p class="text">Following are the functions defined in the header string.h −</p>
+		<table border="1px" width="700px" class="table">
+			<tr>
+				<td>1</td><td><b><i>void *memchr(const void *str, int c, size_t n)</i></b><br>Searches for the first occurrence of the character c (an unsigned char) in the first n bytes of the string pointed to, by the argument str.</td>
+			</tr>
+			<tr>
+				<td>2</td><td><b><i>int memcmp(const void *str1, const void *str2, size_t n)</i></b><br>Compares the first n bytes of str1 and str2.</td>
+			</tr>
+			<tr>
+				<td>3</td><td><b><i>void *memcpy(void *dest, const void *src, size_t n)</i></b><br>Copies n characters from src to dest.</td>
+			</tr>
+			<tr>
+				<td>4</td><td><b><i>void *memmove(void *dest, const void *src, size_t n)</i></b><br>Another function to copy n characters from str2 to str1.</td>
+			</tr>
+			<tr>
+				<td>5</td><td><b><i>void *memset(void *str, int c, size_t n)</i></b><br>Copies the character c (an unsigned char) to the first n characters of the string pointed to, by the argument str.</td>
+			</tr>
+			<tr>
+				<td>6</td><td><b><i>char *strcat(char *dest, const char *src)</i></b><br>Appends the string pointed to, by src to the end of the string pointed to by dest.</td>
+			</tr>
+			<tr>
+				<td>7</td><td><b><i>char *strncat(char *dest, const char *src, size_t n)</i></b><br>Appends the string pointed to, by src to the end of the string pointed to, by dest up to n characters long.</td>
+			</tr>
+			<tr>
+				<td>8</td><td><b><i>char *strchr(const char *str, int c)</i></b><br>Searches for the first occurrence of the character c (an unsigned char) in the string pointed to, by the argument str.</td>
+			</tr>
+			<tr>
+				<td>9</td><td><b><i>int strcmp(const char *str1, const char *str2)</i></b><br>Compares the string pointed to, by str1 to the string pointed to by str2.</td>
+			</tr>
+			<tr>
+				<td>10</td><td><b><i>int strncmp(const char *str1, const char *str2, size_t n)</i></b><br>Compares at most the first n bytes of str1 and str2.</td>
+			</tr>
+			<tr>
+				<td>11</td><td><b><i>int strcoll(const char *str1, const char *str2)</i></b><br>Compares string str1 to str2. The result is dependent on the LC_COLLATE setting of the location.</td>
+			</tr>
+			<tr>
+				<td>12</td><td><b><i>char *strcpy(char *dest, const char *src)</i></b><br>Copies the string pointed to, by src to dest.</td>
+			</tr>
+			<tr>
+				<td>13</td><td><b><i>char *strncpy(char *dest, const char *src, size_t n)</i></b><br>Copies up to n characters from the string pointed to, by src to dest.</td>
+			</tr>
+			<tr>
+				<td>14</td><td><b><i>int remove(const char *filename)</i></b><br>Calculates the length of the initial segment of str1 which consists entirely of characters not in str2.</td>
+			</tr>
+			<tr>
+				<td>15</td><td><b><i>char *strerror(int errnum)</i></b><br>Searches an internal array for the error number errnum and returns a pointer to an error message string.</td>
+			</tr>
+			<tr>
+				<td>16</td><td><b><i>size_t strlen(const char *str)</i></b><br>Computes the length of the string str up to but not including the terminating null character.</td>
+			</tr>
+			<tr>
+				<td>17</td><td><b><i>char *strpbrk(const char *str1, const char *str2)</i></b><br>Finds the first character in the string str1 that matches any character specified in str2.</td>
+			</tr>
+			<tr>
+				<td>18</td><td><b><i>char *strrchr(const char *str, int c)</i></b><br>Searches for the last occurrence of the character c (an unsigned char) in the string pointed to by the argument str.</td>
+			</tr>
+			<tr>
+				<td>19</td><td><b><i>size_t strspn(const char *str1, const char *str2)</i></b><br>Calculates the length of the initial segment of str1 which consists entirely of characters in str2.</td>
+			</tr>
+			<tr>
+				<td>20</td><td><b><i>char *strstr(const char *haystack, const char *needle)</i></b><br>Finds the first occurrence of the entire string needle (not including the terminating null character) which appears in the string haystack.</td>
+			</tr>
+			<tr>
+				<td>21</td><td><b><i>char *strtok(char *str, const char *delim)</i></b><br>Breaks string str into a series of tokens separated by delim.</td>
+			</tr>
+			<tr>
+				<td>22</td><td><b><i>size_t strxfrm(char *dest, const char *src, size_t n)</i></b><br>Transforms the first n characters of the string src into current locale and places them in the string dest.</td>
+			</tr>
+			</table>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

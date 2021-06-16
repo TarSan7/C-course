@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Data types</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css"> 
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon"> 
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Basic_concepts.html">
+			<a class="a1" href="Basic_concepts.html">Basic concepts</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Data types</h1>
+		<br>
+		<p class="text">A variable has a specific type. And this type determines what values ​​a variable can have
+						and how many bytes in memory it will occupy. The following basic data types are defined in C:</p>
+		<ul class="text">
+			<li><b>char:</b> represents a single character. It occupies 1 byte (8 bits) in memory.
+				Can store any value from the range -128 to 127</li>
+				<br>
+			<li><b>unsigned char:</b> represents a single character. It occupies 1 byte (8 bits) in memory.
+				Can store any value from a range from 0 to 255</li>
+				<br>
+			<li><b>signed char:</b> same as <b>char</b></li>
+				<br>
+			<li><b>short int:</b> represents an integer ranging from –32768 to 32767. It occupies 2 bytes
+				(16 bits) in memory.</li>
+				<br>
+			<li><b>short:</b> same as <b>short int.</b></li>
+				<br>
+			<li><b>unsigned short int:</b> represents an integer in the range from 0 to 65535. It occupies 
+				2 bytes (16 bits) in memory.</li>
+				<br>
+			<li><b>unsigned short:</b> same as <b>unsigned short int.</b></li>
+				<br>
+			<li><b>signed short int:</b> same as <b>short int</b></li>
+				<br>
+			<li><b>signed short:</b> same as <b>short int.</b></li>
+				<br>
+			<li><b>int:</b> represents an integer. Depending on the processor architecture, it can take up 2 
+				bytes (16 bits) or 4 bytes (32 bits). The limit value range, respectively, can also vary from 
+				–32768 to 32767 (with 2 bytes) or from −2 147 483 648 to 2 147 483 647 (with 4 bytes).</li>
+				<br>
+			<li><b>unsigned int:</b> represents a positive integer. Depending on the processor architecture,
+				it can occupy 2 bytes (16 bits) or 4 bytes (32 bits), and because of this, the range of limit 
+				values ​​can vary: from 0 to 65535 (for 2 bytes), or from 0 to 4,294,967,295 (for 4 bytes).</li>
+				<br>
+			<li><b>unsigned:</b> same as <b>unsigned int</b></li>
+				<br>
+			<li><b>signed int:</b> same as <b>int</b></li>
+				<br>
+			<li><b>signed:</b> same as <b>int</b></li>
+				<br>
+			<li><b>long int:</b> represents an integer ranging from −2,147,483,648 to 2,147,483,647. 
+				It occupies 4 bytes (32 bits) in memory.</li>
+				<br>
+			<li><b>long:</b> same as <b>long int.</b></li>
+				<br>
+			<li><b>signed long int:</b> same as <b>long int.</b></li>
+				<br>
+			<li><b>signed long:</b> same as <b>long int.</b></li>
+				<br>
+			<li><b>unsigned long int:</b> represents an integer in the range 0 to 4,294,967,295. 
+				It occupies 4 bytes (32 bits) in memory.</li>
+				<br>
+			<li><b>unsigned long:</b> same as <b>unsigned long int.</b></li>
+				<br>
+			<li><b>long long int:</b> represents an integer ranging from −9 223 372 036 854 775 808 to +9 223 372 036 854 775 807. 
+				Usually, it occupies 8 bytes (64 bits) in memory.</li>
+				<br>
+			<li><b>long long:</b> the same as <b>long long int.</b></li>
+				<br>
+			<li><b>signed long long int:</b> same as <b>long long int</b></li>
+				<br>
+			<li><b>signed long long:</b> same as <b>long long int.</b></li>
+				<br>
+			<li><b>unsigned long long int:</b> represents an integer in the range from 0 to 18 446 744 073 709 551 615.
+				Usually it occupies 8 bytes (64 bits) in memory.</li>
+				<br>
+			<li><b>unsigned long long:</b> the same as <b>unsigned long long int.</b></li>
+				<br>
+			<li><b>float:</b> represents a floating point ordinary number in the range +/- 3.4E-38 to 3.4E + 38.
+				4 bytes (32 bits) in memory</li>
+				<br>
+			<li><b>double:</b> represents a double-precision floating-point number in the range 
+				+/- 1.7E-308 to 1.7E + 308. It occupies 8 bytes (64 bits) in memory</li>
+				<br>
+			<li><b>long double:</b> represents a double precision floating-point number in the range
+				+/- 3.4E-4932 to 1.1E + 4932. It occupies 10 bytes (80 bits) in memory. On some systems, 
+					it can occupy 96 and 128 bits.</li>
+				<br>
+			<li><b>void:</b> type without value</li>
+				<br>
+		</ul>
+		<p class="text">Define several variables:</p>
+		<table border="1px" width="400px" class="table">
+			<tr >
+				<td rowspan="5">1<br><br>2<br><br>3<br><br>4<br><br>5</td>
+				<td rowspan="5">int number = 2;<br><br>int a, b;<br><br>char c ='d';<br><br>float d = -2.1345;<br><br>double f = 3.45;</td>
+			<tr>
+		</table>
+		<p class="text">If we need to define several variables of the same type, then we can indicate their names after 
+		the data type, separated by commas: int a, b</p>
+		<p class="text">A variable of type char takes one character in single quotes as a value: char c = 'd'. You can 
+		also assign a number from the range specified above in the list: char c = 120. In this case, the value of the 
+		variable c will be the character that has the code 120 in the ASCII character table.</p>
+		<p class="text">In the above list, for each type, the size it occupies in memory is indicated. However, 
+		it is worth noting that compiler developers can choose the maximum size limits for types based on the hardware 
+		capabilities of the computer. The standard sets only the minimum values ​​that should be. For example, for int and 
+		short types, the minimum value is 16 bits, for long types, 32 bits. In this case, the size of the long type must be 
+		no less than the size of the int type, and the size of the int type must be no less than the size of the short type.
+		But in general, the types use the sizes indicated above when describing data types.</p>
+		<p class="text">However, there are situations when you need to know exactly the size of a certain type.
+		And for this, C has a sizeof () operator, which returns the size of the memory in bytes that the variable occupies:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td rowspan="8">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7</td>
+				<td rowspan="8">#include &ltstdio.h&gt<br><br>int main(void)<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp; int number = 2;<br><br> &nbsp;&nbsp;&nbsp;&nbsp; printf("sizeof(number) = %d \n", sizeof(number));<br><br> &nbsp;&nbsp;&nbsp;&nbsp;
+								return 0; <br><br>}</td>
+			<tr>
+		</table>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

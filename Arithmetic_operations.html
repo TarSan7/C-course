@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Arithmetic operations</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Basic_concepts.html">
+			<a class="a1" href="Basic_concepts.html">Basic concepts</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Arithmetic operations</h1>
+		<br>
+		<p class="text">The C programming language supports all basic arithmetic operations. These operations are performed on numbers.
+						The values ​​that participate in the operation are called operands. List of operations available in C:</p>
+		<ul class="text">
+			<li> + <br><p class="text">The addition operation returns the sum of two numbers:</p>
+				<table border="1px" width="400px" class="table">
+					<tr >
+						<td rowspan="9">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7<br><br>8<br><br>9</td>
+						<td rowspan="9">#include &ltstdio.h&gt<br><br>int main(void)<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp; int a = 67;<br><br> &nbsp;&nbsp;&nbsp;&nbsp; int b = 33;<br><br> &nbsp;&nbsp;&nbsp;&nbsp; int c = a + b + 7;<br><br> &nbsp;&nbsp;&nbsp;&nbsp;
+										printf("a + b + 7 = %d \n", c);<br><br> &nbsp;&nbsp;&nbsp;&nbsp; return 0;<br><br>}</td>
+					<tr>
+				</table>
+			</li>
+			<li> * <br><p class="text">The multiplication operation returns the product of two numbers:</p>
+				<table border="1px" width="400px" class="table">
+					<tr >
+						<td>1</td>
+						<td>int c = 15 * 3; </td>
+					<tr>
+				</table>
+			</li>
+			<li> / <br><p class="text">The operation of dividing two numbers:</p>
+				<table border="1px" width="400px" class="table">
+					<tr>
+						<td rowspan="2">1<br><br>2</td>
+						<td rowspan="2">int a = 15 / 3;<br><br>float d = 34.0 / 3.0;</td>
+					</tr>
+				</table>
+				<p class="text">When dividing, you should be careful, because if two integers are involved in the operation, the division result will be rounded to an integer, even if the result is assigned to the float variable</p>
+			</li>
+			<li> % <br><p class="text">Returns the result of dividing two numbers modulo (getting the remainder of the division):</p>
+				<table border="1px" width="400px" class="table">
+					<tr >
+						<td>1</td>
+						<td>int a = 35 % 3; </td>
+					<tr>
+				</table>
+			</li>
+		</ul>
+		<p class="text">Operations *, /,% have a higher priority than + and -.</p>
+		<p class="text">With the help of parentheses, we can redefine the order of operations
+		by making operations with a lower priority be performed before operations with a higher priority.</p>
+		<p class="text">Also in C there are	special unary operations on one number: ++ (increment) and - (decrement). Each of the operations has two varieties:
+		prefix and postfix.</p>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

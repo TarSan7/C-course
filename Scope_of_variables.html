@@ -1,0 +1,146 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Scope of variables</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Functions.html">
+			<a class="a1" href="Functions.html">Functions</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1 class="text_h1">Scope of variables</h1>
+		<br>
+		<p class="text">Each variable has a specific scope. A scope represents a portion of a program within which a variable can be used.</p>
+		<p class="text">Variables are global and local or automatic.</p>
+		<h2 class="text_h2">Global variables</h2>
+		<p class="text">Global variables are defined in the program file outside any of the functions and can be used by any function.</p>
+		<pre class="lim">
+		#include &ltstdio.h&gt
+ 
+		int n = 5;
+ 
+		void printn()
+		{
+			n++;
+			printf("n=%d \n", n);
+		}
+		 
+		int main(void)
+		{
+			printn();           // n=6
+			n++;
+			printf("n=%d \n", n);   // n=7
+			 
+			return 0;
+		}
+		</pre>
+		<p class="text"></p><p class="text">Here the variable n is global and accessible from any function. Moreover, any function can change its value.</p>
+		<h2 class="text_h2">Automatic variables</h2>
+		<p class="text">Local or automatic variables are defined inside a block of code (for example, inside a function) and exist only within this block. At the entrance to the block, memory (which is also called automatic memory) is allocated for these variables, and after the completion of this block, the allocated memory is freed and objects are deleted.</p>
+		<pre class="lim">
+		#include &ltstdio.h&gt
+ 
+		void printn()
+		{
+			int n = 63;
+			n++;
+			printf("n=%d \n", n);
+		}
+		 
+		int main(void)
+		{
+			int a = 2;
+			printn();               // n=64
+			//n++;      
+			printf("a=%d \n", a);   // a=2
+			return 0;
+		}
+		</pre>
+		<p class="text">Here, the printn function defines an automatic variable n. The main function defines an automatic variable a. When outside their functions, variables are not available. For example, we cannot use the variable n in the main function, since its scope is limited by the printn function.</p>
+		<p class="text">The auto keyword can be applied to automatic variables</p>
+		<p class="text">Although this is not necessary, since any variable defined at the level of a function or block of code is already considered automatic.</p>
+		<h2 class="text_h2">Concealment of Variables</h2>
+		<p class="text">Automatic variables defined inside a code block can hide external variables with the same name:</p>
+		<pre class="lim">
+		#include &ltstdio.h&gt
+ 
+		int n = 5;
+ 
+		int main(void)
+		{
+			int n = 10;
+			printf("n=%d \n", n);       // n=10
+			 
+			{
+				int n = 20;
+				printf("n=%d \n", n);   // n=20
+			}
+			return 0;
+		}
+		</pre>
+		<p class="text">Three variables named n are defined here. The automatic variable n defined at the level of the main function (int n = 10;) hides the global variable n. And the variable n defined at the block level hides the variable defined at the level of the main function.</p>
+		<h2 class="text_h2">Static variables</h2>
+		<p class="text">In addition to global and automatic, there is a special type of variable - static variables. They are defined at the function level using the static keyword. If automatic variables are defined and initialized each time the function is entered, then static variables are initialized only once, and subsequent calls to the function use the old value of the static variable.</p>
+		<p class="text">For example, let us have a function with a standard automatic variable:</p>
+		<pre class="lim">
+		#include &ltstdio.h&gt
+ 
+		void display()
+		{
+			int i = 0;
+			i++;
+			printf("i=%d \n", i);
+		}
+		 
+		int main(void)
+		{
+			display();
+			display();
+			display();
+			return 0;
+		}
+		</pre>
+		<p class="text">The display function is called three times, and with each call, the program will reallocate memory for the variable i, which is defined in the function. And after display completes, the memory for variable i will be freed. Accordingly, its value with each call will be unchanged.</p>
+		<p class="text">Now let's make the i variable static:</p>
+		<pre class="lim">
+		#include &ltstdio.h&gt
+ 
+		void display()
+		{
+			static int i = 0;
+			i++;
+			printf("i=%d \n", i);
+		}
+		 
+		int main(void)
+		{
+			display();
+			display();
+			display();
+			return 0;
+		}
+		</pre>
+		<p class="text">The static keyword was added to the variable, so when the display function finishes, the variable is not destroyed, its memory is not cleared, on the contrary, it is stored in memory. And accordingly, the result of the program will be different.</p>
+		<h2 class="text_h2">Register variables</h2>
+		<p class="text">Register variables are actually also automatic variables, but the register keyword is used to define them. This word tells the compiler that this variable will be used intensively in the application, therefore it is advisable to place it in the processor register, which will increase performance.</p>
+		<p class="text">The register keyword applies to variables:</p>
+		
+		<p class="text"><em><b>register int x = 8;</em></b></p>
+		<p class="text">However, the use of the word register is not yet a guarantee that the variable will actually be placed in the register, since it depends a lot on the hardware of the computer and the limitations set for it. At the same time, if the hardware capabilities do not support register variables, then the word register will simply be ignored, and its use will not cause an error.</p>
+		<br>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

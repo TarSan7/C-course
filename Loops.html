@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Loops</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">  
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Basic_concepts.html">
+			<a class="a1" href="Basic_concepts.html">Basic concepts</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Loops</h1>
+		<br>
+		<p class="text">Cycles allow you to perform one action many times, depending on a specific condition. C has the following types of loops:</p>
+		<ul class="text">
+			<li><em>for</em></li>
+			<li><em>while</em></li>
+			<li><em>do...while</em></li>
+		</ul>
+		<h2 class="text_h2">For loop</h2>
+		<p class="text">The for loop has the following formal definition:</p>
+		<table border="1px" width="600px" class="table">
+			<tr >
+				<td rowspan="4">1<br><br>2<br><br>3<br><br>4</td>
+				<td rowspan="4">for (expression_1; expression_2; expression_3)<br><br>{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;// loop body<br><br>}</td>
+			</tr>
+		</table>
+		<p class="text"><em>expression_1</em> is executed once at the beginning of the execution of the cycle and represents the 
+						installation of the initial conditions, as a rule, this is the initialization of counters - special
+						variables that are used to control the cycle.</p>
+		<p class="text"><em>expression_2</em> represents a condition under which a loop is executed. As a rule, a comparison 
+						operation is used as a condition, and if it returns a nonzero value (that is, the condition is true),
+						the loop body is executed, and then expression_3 is evaluated.</p>
+		<p class="text"><em>expression_3</em> specifies a change in the parameters of the cycle, often there is an increase
+						in the counters of the cycle by one.</p>
+		<p class="text">Consider the standard for loop:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td rowspan="9">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7<br><br>8<br><br>9</td>
+				<td rowspan="9">#include &ltstdio.h&gt<br><br>int main(void)<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i &lt 9; i++);
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;{<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d * %d = %d \n", i, i,  i * i);
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;}
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br><br>}</td>
+			</tr>
+		</table>
+		<p class="text">The first part of the loop declaration - int i = 0 - creates and initializes the counter i. 
+						The counter need not represent an int. It can be another numerical type, for example, float.
+						And before the loop is executed, its value will be 0. In this case, it is the same as declaring 
+						a variable.</p>
+		<p class="text">The second part is the condition under which the cycle will be executed. In this case,
+						the loop will run until i reaches 9.</p>
+		<p class="text">And the third part is the increment of the counter per unit. Again, we do not have to increase
+						by one. You can reduce: i--. You can change to another value: i + = 2.</p>
+		<p class="text">As a result, the cycle block will work 9 times until the value of i becomes equal to 9. And each
+						time this value will increase by 1.</p>
+		<p class="text">Each individual loop pass is called an iteration. That is, in the example above there were 9 
+						iterations.</p>
+		<h2 class="text_h2">Do loop</h2>
+		<p class="text">In the do loop, the loop code is executed first, and then the condition is checked in the while 
+						statement. And while this condition is true, that is, it is not equal to 0, the cycle repeats. </p>
+		<h2 class="text_h2">While loop</h2>
+		<p class="text">Unlike the do loop, the while loop immediately checks the validity of a certain condition, and if
+						the condition is true, that is, it is not equal to 0, then the loop code is executed</p>
+		<h2 class="text_h2">Continue and break statements</h2>
+		<p class="text">Sometimes it becomes necessary to exit the cycle before it is completed. In this case,
+						you can use the break statement.</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td rowspan="7">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7</td>
+				<td rowspan="7">int i = 1;<br><br>for ( ; ; )<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp;printf("%d * %d = %d \n", i, i,  i * i);
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;i++;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if (i > 10) break;
+						<br><br>}</td>
+			</tr>
+		</table>
+		<p class="text">Here, when the value of the variable i reaches 10, the loop is exited using the break statement.</p>
+		<p class="text">Unlike the break statement, the continue statement jumps to the next iteration. For example, 
+						we need to calculate the sum of only odd numbers from a certain range. To find out if the number 
+						is even, we get the remainder of the integer division by 2, and if it is 0, then using the continue 
+						operator we go to the next iteration of the loop. And if the number is odd, then add it to the rest 
+						of the odd numbers.</p>
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>

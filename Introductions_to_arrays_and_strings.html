@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Introductions to arrays and strings</title>
+		<link rel = "stylesheet" type="text/css" href="style/img.css">
+		<link rel="shortcut icon" href="1.ico" type="image/x-icon">  
+	</head>
+	<body bgcolor="#CCCCFF">
+		<div id="rectangle"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="150px" height="100px"></div>
+		<div id="rectangle0">
+			<br>
+			<!--<hr size="3px" color="3333CC">-->
+			<img id="strelka" src="strelka.png" width="40px" height="25px" usemap="#back">
+			<map name="back">
+			<area shape="rect" coords="0,0,40,25" href="Basic_concepts.html">
+			<a class="a1" href="Basic_concepts.html">Basic concepts</a>
+			<!--<hr size="3px" color="3333CC">-->
+		</div>
+		<h1>Introductions to arrays and strings</h1>
+		<br>
+		<p class="text">An array represents a set of similar values. The array declaration is as follows:</p>
+		
+		
+		<p class="text"><em>variable_type array_name [array_length]</em></p>
+		<p class="text">After the type of the variable is the name of the array, 
+						and then in square brackets its size. For example, define an array of 4 numbers:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td >1</td>
+				<td >int numbers[4];</td>
+			</tr>
+		</table>
+		<p class="text">Using the element numbers of the array, which are called indexes, we can refer
+						to individual elements. For example:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td rowspan="7">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7<br><br>8<br><br>9<br><br>10<br><br>11</td>
+				<td rowspan="7">#include &ltstdio.h&gt<br><br>int main(void)<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp;int numbers[4];
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;numbers[0] = 1;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;numbers[1] = 2;
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;numbers[2] = 3;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;numbers[3] = 4;
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;printf("numbers[2] = %d", numbers[2]);  // 3<br><br>&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+						<br><br>}</td>
+			</tr>
+		</table>
+		<p class="text">Indexes start from zero, therefore, to access the first element, you must use the numbers [0] expression.</p>
+		<p class="text">We can also immediately declare and initialize the array with values. For this array variable,
+						a set of values ​​separated by commas in curly brackets is assigned:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td rowspan="2">1<br><br>2</td>
+				<td rowspan="2">int numbers[4] = { 1, 2, 3, 5 };<br><br>printf("numbers[2] = %d", numbers[2]);  // 3</td>
+			</tr>
+		</table>
+		<p class="text">When initializing the array, you can not explicitly specify its length, in this case the length of 
+						the array will be calculated based on the number of its elements:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td>1</td>
+				<td>int numbers[] = { 1, 2, 3, 5 };</td>
+			</tr>
+		</table>
+		<p class="text">Using circular constructs, you can iterate over an array. It is not necessary to initialize the array with 
+						values ​​for all its elements.</p>
+		<h2 class="text_h2">Multidimensional Arrays</h2>
+		<p class="text">Arrays can be multidimensional. Elements of such arrays themselves, in turn, are arrays, in which elements 
+						can also be arrays. For example, define a two-dimensional array of numbers:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td>1</td>
+				<td>int numbers[3][2] = { {1, 2}, {4, 5}, {7, 8} };</td>
+			</tr>
+		</table>
+		<p class="text">To access the elements of a nested array, two indexes are required:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td rowspan="2">1<br><br>2</td>
+				<td rowspan="2">int numbers[3][2] = { {1, 2}, {4, 5}, {7, 8} };<br><br>
+								printf("numbers[1][0] = %d \n", numbers[1][0]);     // 4</td>
+			</tr>
+		</table>
+		<h2 class="text_h2">Strings</h2>
+		<p class="text">Arrays of numbers were considered above, but with arrays of other data types everything
+						will be the same. But it is worthwhile to dwell on arrays of characters. Different programming
+						languages ​​have special data types for representing strings. In the C programming language, arrays
+						of characters are used to represent strings, because in fact a string is a set of characters. For
+						example, define a line:</p>
+		<table border="1px" width="500px" class="table">
+			<tr>
+				<td rowspan="7">1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6<br><br>7</td>
+				<td rowspan="7">#include &ltstdio.h&gt<br><br>int main(void)<br><br>{<br><br> &nbsp;&nbsp;&nbsp;&nbsp; char welcome[] = "Hello";
+						<br><br>&nbsp;&nbsp;&nbsp;&nbsp;printf("welcome = %s \n", welcome);<br><br>&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br><br>}</td>
+			</tr>
+		</table>
+		<p class="text">Strings are specified in double quotation marks. And if we need strings in the program, then we can just use 
+						arrays of characters.</p>
+		<p class="text">But it is worth noting that in addition to the characters themselves, which are enclosed in double 
+						quotes, each line as the trailing character contains the character '\ 0' or a null character. 
+						Therefore, the string "Hello" will actually not be 5 characters, but 6.</p>
+		
+		
+		<br><br><br><br><br><br><br><br>
+		<footer>
+			<div id="rectangle_foot"><img src="http://semantic-portal.net/output/images/robotico_rubik.png" width="100px" height="80px" id="foot">
+				<p align="center" class="text_foot">Курс создан при поддержке активных студенток АПЕПСА, групы ТВ-91</p>
+			</div>
+		</footer>
+	</body>
+</html>
